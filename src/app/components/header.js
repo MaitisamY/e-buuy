@@ -8,7 +8,7 @@ export default function Header() {
             <div className="header-container">
                 <Link href="/">
                     <h1>
-                        <span>E</span>=BUUY
+                        <span>E</span>-BUUY
                     </h1>
                 </Link>
                 <nav>
@@ -50,10 +50,10 @@ export default function Header() {
                         Wishlist
                     </Link>
                     <Link className={`link ${pathname === '/cart' ? 'active' : ''}`} href="/cart">
-                        <BsCart size={20} />
+                        <BsCart size={25} />
                     </Link>
                     <Link className={`link ${pathname === '/login' ? 'active' : ''}`} href="/login">
-                        <BsPersonCircle size={20} />
+                        <BsPersonCircle size={25} />
                     </Link>
                 </div>
             </div>
