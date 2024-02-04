@@ -1,8 +1,9 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { BsCart, BsPersonCircle } from 'react-icons/bs'
+import { BsCart, BsPersonCircle, BsSuitHeart } from 'react-icons/bs'
 export default function Header() {
-    const pathname = usePathname()
+    const pathname = usePathname();
+    console.log(pathname);
     return (
         <header>
             <div className="header-container">
@@ -24,16 +25,6 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link className={`link ${pathname === '/products' ? 'active' : ''}`} href="/products">
-                                Products
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className={`link ${pathname === '/categories' ? 'active' : ''}`} href="/categories">
-                                Categories
-                            </Link>
-                        </li>
-                        <li>
                             <Link className={`link ${pathname === '/contact' ? 'active' : ''}`} href="/contact">
                                 Contact
                             </Link>
@@ -46,14 +37,26 @@ export default function Header() {
                     </ul>
                 </nav>
                 <div className="util-container">
-                    <Link className={`link ${pathname === '/login' ? 'active' : ''}`} href="/wishlist">
-                        Wishlist
+                    <Link
+                        title="Wishlist"
+                        className={`link ${pathname === '/login' ? 'active' : ''}`} 
+                        href="/wishlist"
+                    >
+                        <BsSuitHeart size={25} />
                     </Link>
-                    <Link className={`link ${pathname === '/cart' ? 'active' : ''}`} href="/cart">
+                    <Link
+                        title="Cart" 
+                        className={`link ${pathname === '/cart' ? 'active' : ''}`} 
+                        href="/cart"
+                    >
                         <BsCart size={25} />
                     </Link>
-                    <Link className={`link ${pathname === '/login' ? 'active' : ''}`} href="/login">
-                        <BsPersonCircle size={25} />
+                    <Link 
+                        title="Login"
+                        className={`link ${pathname === '/login' ? 'active' : ''}`} 
+                        href="/login"
+                    >
+                        <BsPersonCircle size={35} />
                     </Link>
                 </div>
             </div>

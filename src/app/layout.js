@@ -1,4 +1,5 @@
 import './globals.css'
+import './aitisam.css'
 
 export const metadata = {
   title: "E-BUUY", 
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
         <meta name="author" content={metadata.author} />
         <link rel="icon" type="image/icon" href="/favicon.png" sizes="any" />
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning={true}>{children}</body>
     </html>
   );
 }
