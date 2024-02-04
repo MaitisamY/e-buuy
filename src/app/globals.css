@@ -248,13 +248,12 @@ main {
 
 .banner {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   min-height: 20vh;
   margin-top: 25px;
   padding: 20px 40px 20px 40px;
-  width: 32%;
+  width: 50%;
   height: auto;
   backdrop-filter: blur(2px);
   border-radius: 25px;
@@ -271,6 +270,33 @@ main {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 } 
+
+/* .banner:first-child {
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-items: flex-start;
+  align-items: flex-start;
+} */
+
+/* .banner:last-child {
+  justify-content: flex-end;
+  align-items: flex-end;
+  justify-items: flex-end;
+  align-items: flex-end;
+} */
+
+.intro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  /* min-height: 20vh;
+  margin-top: 25px; */
+  padding: 20px 10px 20px 10px;
+  width: 70%;
+  height: auto;
+}
 
 .banner h1 {
   font-family: "Raleway", sans-serif;
@@ -307,15 +333,16 @@ main {
 
 .slider {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  min-height: 20vh;
-  margin-top: 25px;
-  padding: 20px 40px 20px 40px;
-  width: 18%;
+  /* min-height: 20vh;
+  margin-top: 25px; */
+  padding: 20px 10px 20px 10px;
+  width: 30%;
   height: auto;
-  backdrop-filter: blur(2px);
+  gap: 20px;
+  /* backdrop-filter: blur(2px);
   border-radius: 25px;
   background: rgb(223,46,99);
   background: linear-gradient(0deg, rgba(223, 46, 99, 0.4627992261357668) 0%, rgba(34, 193, 195, 0.4459925034466911) 100%);
@@ -328,25 +355,39 @@ main {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  animation-fill-mode: both; */
 }
 
-.slider h1 {
+.slider .Img {
+  width: auto;
+  height: 140px;
+  filter: drop-shadow(0 0 0.75rem #000);
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.slider .Img.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.slider h2 {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-size: 38px;
+  font-size: 30px;
   color: black;
   filter: drop-shadow(0 0 0.75rem #000);
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
 }
 
-.slider button .Img {
-  width: auto;
-  height: 18vh;
-  filter: drop-shadow(0 0 0.75rem #000);
-  object-fit: cover;
-  object-position: center;
+.slider h2.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .slider button {

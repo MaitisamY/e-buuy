@@ -12,3 +12,23 @@
     align-content: center;
     justify-items: center;
 }
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    flex: 1 1 0;
+    max-width: 33.33%;
+    max-height: 33.33%;
+    min-width: 33.33%;
+    min-height: 33.33%;
+}

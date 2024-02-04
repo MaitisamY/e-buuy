@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { BsCart, BsPersonCircle, BsSuitHeart } from 'react-icons/bs'
 export default function Header() {
     const pathname = usePathname();
-    console.log(pathname);
     return (
         <header>
             <div className="header-container">

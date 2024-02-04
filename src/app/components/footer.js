@@ -5,9 +5,9 @@ export default function Footer() {
     return (
         <footer>
             <p>&copy; {new Date().getFullYear()}, E-BUUY.</p>
-                {/* <span>Made with ❤️ by 
-                    <a target="_blank" rel="noopener noreferrer" onClick={gotoMyPortfolio}> Aitisam Yaseen</a>
-                </span> */}
+            {/* <span>Made with ❤️ by 
+                <a target="_blank" rel="noopener noreferrer" onClick={gotoMyPortfolio}> Aitisam Yaseen</a>
+            </span> */}
         </footer>
     );
 }

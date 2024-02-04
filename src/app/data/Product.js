@@ -8,6 +8,7 @@ const SLIDER_PRODUCTS = [
         name: 'Product 1',
         price: 1000,
         image: SLIDE_1,
+        feature: 'Durability',
         alt: 'Photo of slider product 1',
     },
     {
@@ -15,6 +16,7 @@ const SLIDER_PRODUCTS = [
         name: 'Product 2',
         price: 2000,
         image: SLIDE_2,
+        feature: 'Softness',
         alt: 'Photo of slider product 2',
     },
     {
@@ -22,6 +24,7 @@ const SLIDER_PRODUCTS = [
         name: 'Product 3',
         price: 3000,
         image: SLIDE_3,
+        feature: 'Breathability',
         alt: 'Photo of slider product 3',
     },
     {
@@ -29,6 +32,7 @@ const SLIDER_PRODUCTS = [
         name: 'Product 4',
         price: 4000,
         image: SLIDE_4,
+        feature: 'Colorfastness',
         alt: 'Photo of slider product 4',
     }
 ]

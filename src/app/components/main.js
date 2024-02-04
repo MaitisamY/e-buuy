@@ -15,7 +15,7 @@ import Content from '../home/content'
 
 export default function Main({ HOME, SHOP, CONTACT, ABOUT }) {
     return (
-        <main>
+        <main loading="lazy">
             {
                 HOME ? (
                     <Content />
