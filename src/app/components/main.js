@@ -1,38 +1,48 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-// export function useWindowSize() {
-//     const [size, setSize] = useState([0, 0]);
-//     useEffect(() => {
-//         function updateSize() {
-//             setSize([window.innerWidth, window.innerHeight]);
-//         }
-//         window.addEventListener('resize', updateSize);
-//         updateSize();
-//         return () => window.removeEventListener('resize', updateSize);
-//     }, []);
-//     return size;
-// }
-import Content from '../home/content'
+import { lazy, Suspense } from 'react'
+const HOME_CONTENT = lazy(() => import('../home/content'))
 
-export default function Main({ HOME, SHOP, CONTACT, ABOUT }) {
+export default function Main({ HOME, SHOP, CONTACT, ABOUT, WISHLIST, ACCOUNT, CART, children }) {
     return (
-        <main loading="lazy">
+        <main>
+            <Suspense fallback={<div className="loader">Loading...</div>}>
             {
                 HOME ? (
-                    <Content />
-                ) : SHOP ? (
+                    <HOME_CONTENT />
+                ) : 
+                SHOP ? (
                     <>
-
+                        {children}
                     </>
-                ) : CONTACT ? (
+                ) : 
+                CONTACT ? (
                     <>
-
+                        {children}
                     </>
-                ) : ABOUT ? (
+                ) : 
+                ABOUT ? (
                     <>
-
+                        {children}
                     </>
-                ) : null
+                ) : 
+                WISHLIST ? (
+                    <>
+                        {children}
+                    </>
+                )
+                : ACCOUNT ? (
+                    <>
+                        {children}
+                    </>
+                )
+                : CART ? (
+                    <>
+                        {children}
+                    </>
+                )
+                : null
             }
+            </Suspense>
         </main>
     );
 }

@@ -1,12 +1,13 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { BsCart, BsPersonCircle, BsSuitHeart } from 'react-icons/bs'
-export default function Header() {
+
+export default function Header({ toggler }) {
     const pathname = usePathname();
     return (
         <header>
             <div className="header-container">
-                <Link href="/">
+                <Link href={pathname === '/' ? '#' : "/"}>
                     <h1>
                         <span>E</span>-BUUY
                     </h1>
@@ -14,22 +15,38 @@ export default function Header() {
                 <nav>
                     <ul>
                         <li>
-                            <Link className={`link ${pathname === '/' ? 'active' : ''}`} href="/">
+                            <Link 
+                                title="Home" 
+                                className={`link ${pathname === '/' ? 'active' : ''}`} 
+                                href={pathname === '/' ? '#' : "/"}
+                            >
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link className={`link ${pathname === '/shop' ? 'active' : ''}`} href="/shop">
+                            <Link 
+                                title="Shop" 
+                                className={`link ${pathname === '/shop' ? 'active' : ''}`} 
+                                href="/shop"
+                            >
                                 Shop
                             </Link>
                         </li>
                         <li>
-                            <Link className={`link ${pathname === '/contact' ? 'active' : ''}`} href="/contact">
+                            <Link 
+                                title="Contact" 
+                                className={`link ${pathname === '/contact' ? 'active' : ''}`} 
+                                href="/contact"
+                            >
                                 Contact
                             </Link>
                         </li>
                         <li>
-                            <Link className={`link ${pathname === '/about' ? 'active' : ''}`} href="/about">
+                            <Link 
+                                title="About" 
+                                className={`link ${pathname === '/about' ? 'active' : ''}`} 
+                                href="/about"
+                            >
                                 About
                             </Link>
                         </li>
@@ -38,22 +55,24 @@ export default function Header() {
                 <div className="util-container">
                     <Link
                         title="Wishlist"
-                        className={`link ${pathname === '/login' ? 'active' : ''}`} 
-                        href="/wishlist"
+                        className="link" 
+                        onClick={() => toggler('wishlist')}
+                        href="#"
                     >
                         <BsSuitHeart size={25} />
                     </Link>
                     <Link
                         title="Cart" 
-                        className={`link ${pathname === '/cart' ? 'active' : ''}`} 
-                        href="/cart"
+                        className="link"
+                        onClick={() => toggler('cart')}
+                        href="#"
                     >
                         <BsCart size={25} />
                     </Link>
                     <Link 
-                        title="Login"
-                        className={`link ${pathname === '/login' ? 'active' : ''}`} 
-                        href="/login"
+                        title="Account"
+                        className={`link ${pathname === '/account' ? 'active' : ''}`} 
+                        href="/account"
                     >
                         <BsPersonCircle size={35} />
                     </Link>

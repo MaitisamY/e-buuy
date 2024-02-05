@@ -6,7 +6,7 @@ import Content from './content'
 import Globals from '../globals'
 import CartOrWishlistToggle from '../components/cartOrWishlistToggle'
 
-export default function Contact() {
+export default function Account() {
     const { isCartOpen, isWishlistOpen, toggleCartOrWishlist } = Globals();
     return (
         <>
@@ -14,10 +14,10 @@ export default function Contact() {
             <Main 
                 HOME={false} 
                 SHOP={false} 
-                CONTACT={true} 
-                ABOUT={false} 
+                CONTACT={false} 
+                ABOUT={false}
                 WISHLIST={false}
-                ACCOUNT={false}
+                ACCOUNT={true}
                 CART={false}
             >
                 <Content />
