@@ -1,0 +1,127 @@
+header {
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    vertical-align: middle;
+    width: auto;
+    gap: 100px;
+    backdrop-filter: blur(2px);
+    border-radius: 30px;
+    margin: 10px 0 0 0;
+    padding: 0; 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  
+  header h1 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 40px;
+    color: #DF2E63;
+  }
+  
+  header h1 span {
+    border-radius: 50%;
+    background-color: #DF2E63;
+    color: #fff;
+    padding: 2px 12px;
+  }
+  
+  nav {
+    width: auto;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 20px;
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li {
+    width: auto;
+    display: inline-block;
+    padding: 5px 5px 5px 0;
+    margin: 0 15px 0 15px;
+  }
+  
+  nav ul li .link {
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  nav ul li .link:hover {
+    color: #DF2E63;
+  }
+  
+  nav ul li .link.active {
+    color: white;
+    background-color: #DF2E63;
+  }
+  
+  .util-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .util-container .link {
+    text-decoration: none;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 25px;
+  }
+  
+  .util-container .link:hover {
+    color: #DF2E63;
+  }
+  
+  .util-container .link.active {
+    color: #DF2E63;
+  }
+  
+  .util-container:last-child {
+    padding-right: 5px;
+    margin-top: 4px;
+  }

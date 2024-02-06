@@ -1,3 +1,4 @@
+import cartOrWishlistToggle from './cartOrWishlistToggle.css'
 import { BsXLg } from 'react-icons/bs'
 export default function Cart({ cartStatus, wishlistStatus, toggler }) {
     return (

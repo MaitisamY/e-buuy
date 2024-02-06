@@ -1,3 +1,4 @@
+import headerStyles from './header.css'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { BsCart, BsPersonCircle, BsSuitHeart } from 'react-icons/bs'

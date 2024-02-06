@@ -1,3 +1,4 @@
+import FooterStyles from './footer.css';
 
 export default function Footer() {
     // const gotoMyPortfolio = () => {
