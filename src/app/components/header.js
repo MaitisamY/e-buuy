@@ -1,7 +1,7 @@
 import headerStyles from './header.css'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { BsCart, BsPersonCircle, BsSuitHeart } from 'react-icons/bs'
+import { BsCart, BsList, BsPersonCircle, BsSuitHeart } from 'react-icons/bs'
 
 export default function Header({ toggler }) {
     const pathname = usePathname();
@@ -12,6 +12,9 @@ export default function Header({ toggler }) {
                     <h1>
                         <span>E</span>-BUUY
                     </h1>
+                </Link>
+                <Link className="responsive-toggler" href="#">
+                    <BsList />
                 </Link>
                 <nav>
                     <ul>

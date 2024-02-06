@@ -42,6 +42,10 @@ header {
     color: #fff;
     padding: 2px 12px;
   }
+
+  .responsive-toggler {
+    display: none;
+  }
   
   nav {
     width: auto;
@@ -124,4 +128,42 @@ header {
   .util-container:last-child {
     padding-right: 5px;
     margin-top: 4px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      vertical-align: middle;
+      width: 90%;
+      gap: 100px;
+    }
+
+    nav {
+      display: none;
+    }
+
+    .util-container {
+      display: none;
+    }
+
+    .responsive-toggler {
+      display: block;
+      text-decoration: none;
+      padding: 0;
+      font-size: 30px;
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      color: black;
+      cursor: pointer;
+      border-radius: 20px;
+      margin: 5px 15px 0 0;
+      justify-self: flex-end;
+      align-self: center;
+      place-self: right;
+    }
   }
