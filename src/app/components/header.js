@@ -1,10 +1,14 @@
+import { useState, useEffect } from 'react';
 import headerStyles from './header.css'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { BsCart, BsList, BsPersonCircle, BsSuitHeart } from 'react-icons/bs'
+import { BsCart, BsList, BsPersonCircle, BsSuitHeart, BsXLg } from 'react-icons/bs'
 
 export default function Header({ toggler }) {
     const pathname = usePathname();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     return (
         <header>
             <div className="header-container">
@@ -13,7 +17,7 @@ export default function Header({ toggler }) {
                         <span>E</span>-BUUY
                     </h1>
                 </Link>
-                <Link className="responsive-toggler" href="#">
+                <Link className="responsive-toggler" href="#" onClick={toggleMenu}>
                     <BsList />
                 </Link>
                 <nav>
@@ -81,6 +85,20 @@ export default function Header({ toggler }) {
                         <BsPersonCircle size={35} />
                     </Link>
                 </div>
+            </div>
+            <div className={`responsive-menu ${isMenuOpen ? 'open' : ''}`}>
+                <button className="close" onClick={toggleMenu}>
+                    <BsXLg />
+                </button>
+                <Link className="link" href="#" onClick={() => toggler('wishlist')}>
+                    <BsSuitHeart size={25} /> Wishlist
+                </Link>
+                <Link className="link" href="/cart">
+                    <BsCart size={25} /> Cart
+                </Link>
+                <Link className="link" href="/account">
+                    <BsPersonCircle size={25} /> Account
+                </Link>
             </div>
         </header>
     );

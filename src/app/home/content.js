@@ -21,18 +21,14 @@ export default function Content() {
         return () => clearInterval(interval);
     }, [sliderProducts.length, sliderIndex]);
 
-    const shopNowClick = () => {
-        window.location.href = '/shop';
-    }
-
     return (
         <div className="row">
             <div className="banner">
                 <div className="intro">
                     <h1>Welcome to the new era of premium fabric T-Shirts.</h1>
-                    <button onClick={shopNowClick}>
+                    <Link className="link" href="/shop">
                         Shop Now
-                    </button>
+                    </Link>
                 </div>
                 <div className="slider">
                     <Image

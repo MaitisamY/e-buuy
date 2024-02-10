@@ -94,6 +94,10 @@
   }
 }
 
+.App {
+    position: relative;
+}
+
 .loader {
   font-family: "Raleway", sans-serif;
   text-align: center; 
@@ -186,7 +190,7 @@ main {
   opacity: 1;
 }
 
-.intro button {
+.intro .link {
   width: 200px;
   height: 40px;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -206,7 +210,7 @@ main {
   transition: 0.3s all ease-in-out;
 }
 
-.intro button:hover {
+.intro .link:hover {
   border: 1px solid #000;
   color: #000;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
@@ -256,29 +260,6 @@ main {
   pointer-events: none;
 }
 
-.slider button {
-  width: 200px;
-  height: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  background-color: transparent;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 16px;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  cursor: pointer;
-}
-
-.slider button:hover {
-  border: 1px solid #000;
-  color: #000;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  transition: 0.3s all ease-in-out;
-}
-
 @media screen and (max-width: 880px) {
   main {
     min-height: 84vh;
@@ -320,7 +301,7 @@ main {
     margin-top: 25px;
   }
 
-  .intro button {
+  .intro .link {
     width: 80%;
     height: auto;
     border: 1px solid rgba(0, 0, 0, 0.3);
