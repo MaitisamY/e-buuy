@@ -15,8 +15,8 @@ header {
     align-items: center;
     flex-direction: row;
     vertical-align: middle;
-    width: auto;
-    gap: 15px;
+    width: 50%;
+    gap: auto;
     backdrop-filter: blur(2px);
     border-radius: 30px;
     margin: 10px 0 0 0;

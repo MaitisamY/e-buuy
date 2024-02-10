@@ -16,19 +16,23 @@ export default function Content() {
             setSliderIndex((prevIndex) => (prevIndex + 1) % sliderProducts.length);
             setIsVisible(true);
         }, 500); 
-        }, 5000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [sliderProducts.length, sliderIndex]);
+
+    const shopNowClick = () => {
+        window.location.href = '/shop';
+    }
 
     return (
         <div className="row">
             <div className="banner">
                 <div className="intro">
                     <h1>Welcome to the new era of premium fabric T-Shirts.</h1>
-                    <Link className="link" href="/shop">
+                    <button onClick={shopNowClick}>
                         Shop Now
-                    </Link>
+                    </button>
                 </div>
                 <div className="slider">
                     <Image
@@ -37,7 +41,11 @@ export default function Content() {
                         alt={sliderProducts[sliderIndex].alt}
                         priority
                     />
-                    <h2 className={`feature ${isVisible ? 'visible' : 'hidden'}`}>{sliderProducts[sliderIndex].feature}</h2>
+                    <h2 
+                        className={`feature ${isVisible ? 'visible' : 'hidden'}`}
+                    >
+                        {sliderProducts[sliderIndex].feature}
+                    </h2>
                 </div>
             </div>
         </div>
