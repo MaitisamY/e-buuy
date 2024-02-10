@@ -296,9 +296,20 @@ main {
     width: 100%;
     height: auto;
   }
+  
+  .intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0 20px 0;
+    width: 100%;
+    height: auto;
+  }
 
   .intro h1 {
     font-size: 30px;
+    width: 80%;
   }
 
   .slider h2 {
@@ -310,7 +321,7 @@ main {
   }
 
   .intro button {
-    width: 100%;
+    width: 80%;
     height: auto;
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
@@ -345,24 +356,6 @@ main {
     width: 90%;
     height: auto;
   }
-
-  .intro button {
-    width: 100%;
-    height: auto;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    background-color: transparent;
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 16px;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    cursor: pointer;
-    text-align: center;
-    padding: 10px;
-  }
 }
 
 @media screen and (max-width: 300px) {
@@ -372,24 +365,6 @@ main {
 
   .slider h2 {
     font-size: 18px;
-  }
-
-  .intro button {
-    width: 100%;
-    height: auto;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    background-color: transparent;
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 16px;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    cursor: pointer;
-    text-align: center;
-    padding: 10px;
   }
 }
 
