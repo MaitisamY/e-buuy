@@ -10,6 +10,7 @@ export default function Main({
     WISHLIST, 
     ACCOUNT, 
     CART, 
+    PRODUCT,
     toggler, 
     children }) {
     return (
@@ -45,6 +46,11 @@ export default function Main({
                     </>
                 ) : 
                 CART ? (
+                    <>
+                        {children}
+                    </>
+                ) : 
+                PRODUCT ? (
                     <>
                         {children}
                     </>

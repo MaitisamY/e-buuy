@@ -198,11 +198,12 @@
 
 /* SECOND ELEMENT */
 
+/* HEROES */
 .heroes {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 25px 0 0 0;
+    margin: 25px 0 25px 0;
     padding: 0;
     width: 50%;
     height: auto;
@@ -217,6 +218,7 @@
     animation-fill-mode: both;
 }
 
+/* HERO MULTIPLE */
 .hero-multiple {
     display: flex;
     justify-content: flex-start;
@@ -226,16 +228,198 @@
     padding: 0;
     width: 50%;
     height: auto;
-    gap: 0;
+    gap: 10px;
 }
 
+.hero-multiple .Img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+    padding: 5px;
+}
+
+.hero-multiple h3 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+    filter: drop-shadow(0 0 0.75rem #fff);
+    opacity: 1;
+    padding: 0 10px 0 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.shop-now-btn {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    height: auto;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    place-self: left;
+    justify-self: start;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.shop-now-btn:hover {
+    color: black;
+}
+
+/* HERO SINGLE */
 .hero-single {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0;
     width: 50%;
     height: auto;
     gap: 0;
+    border-radius: 20px;
+    background: rgb(223,46,99);
+    background: linear-gradient(0deg, rgba(223, 46, 99, 0.4627992261357668) 0%, rgba(34, 193, 195, 0.4459925034466911) 100%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+    -webkit-animation-duration: .75s;
+    animation-duration: .75s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.tags-hero-single {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    gap: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-single .Img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+    padding: 5px;
+}
+
+.hero-single h3 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    color: black;
+    filter: drop-shadow(0 0 0.75rem #fff);
+    opacity: 1;
+    padding: 0 10px 0 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-single p {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    color: black;
+    filter: drop-shadow(0 0 0.75rem #fff);
+    opacity: 1;
+    padding: 0 10px 0 20px;
+    width: 100%;
+}
+
+.cart-wishlist-holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    gap: 0;
+}
+
+.add-to-cart-btn {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    height: auto;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: rgba(34, 193, 195, 0.75);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 0 20px;
+    place-self: left;
+    justify-self: start;
+    cursor: pointer;
+    width: 50%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: rgba(34, 193, 195, 1);
+}
+
+.add-to-wishlist-btn {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    height: auto;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: rgba(223, 46, 99, 0.75);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 20px 0;
+    place-self: right;
+    justify-self: end;
+    cursor: pointer;
+    width: 50%;
+}
+
+.add-to-wishlist-btn:hover {
+    background-color: rgba(223, 46, 99, 1);
 }

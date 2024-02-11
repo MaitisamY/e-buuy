@@ -1,13 +1,13 @@
-import SLIDE_1 from './Images/slider/slide.png'
-import SLIDE_2 from './Images/slider/slide-2.png'
-import SLIDE_3 from './Images/slider/slide-3.png'
-import SLIDE_4 from './Images/slider/slide-4.png'
-import PRODUCT_1 from './Images/product/1.png'
-import PRODUCT_2 from './Images/product/2.png'
-import PRODUCT_3 from './Images/product/3.png'
-import PRODUCT_4 from './Images/product/4.png'
-import PRODUCT_5 from './Images/product/5.png'
-import PRODUCT_6 from './Images/product/6.png'
+import SLIDE_1 from '../assets/slider/slide.png'
+import SLIDE_2 from '../assets/slider/slide-2.png'
+import SLIDE_3 from '../assets/slider/slide-3.png'
+import SLIDE_4 from '../assets/slider/slide-4.png'
+import PRODUCT_1 from '../assets/1.png'
+import PRODUCT_2 from '../assets/2.png'
+import PRODUCT_3 from '../assets/3.png'
+import PRODUCT_4 from '../assets/4.png'
+import PRODUCT_5 from '../assets/5.png'
+import PRODUCT_6 from '../assets/6.png'
 
 const SLIDER_PRODUCTS = [
     {
@@ -39,8 +39,9 @@ const SLIDER_PRODUCTS = [
 const SELLING_PRODUCTS = [
     {
         id: 1,
-        name: 'Product 1',
-        price: 1000,
+        uniqueId: 10254856,
+        name: 'Signature T-Shirt',
+        price: 999,
         image: PRODUCT_1,
         detail: `Unwind in our signature t-shirt, crafted from a sumptuously soft cotton blend for 
         an unparalleled comfort experience.`,
@@ -51,8 +52,9 @@ const SELLING_PRODUCTS = [
     },
     {
         id: 2,
-        name: 'Product 2',
-        price: 2000,
+        uniqueId: 52635478,
+        name: 'Graphic T',
+        price: 1999,
         image: PRODUCT_2,
         detail: `Make a statement with our trend-setting graphic t-shirt, a unique and expressive 
         addition to your wardrobe.`,
@@ -63,8 +65,9 @@ const SELLING_PRODUCTS = [
     },
     {
         id: 3,
-        name: 'Product 3',
-        price: 3000,
+        uniqueId: 12004580,
+        name: 'Casual T',
+        price: 2499,
         image: PRODUCT_3,
         detail: `Elevate your ensemble with the versatility of our essential wardrobe t-shirt, 
         a seamless transition from casual outings to relaxed evenings.`,
@@ -75,8 +78,9 @@ const SELLING_PRODUCTS = [
     },
     {
         id: 4,
-        name: 'Product 4',
-        price: 4000,
+        uniqueId: 91245633,
+        name: 'Comfort T',
+        price: 2999,
         image: PRODUCT_4,
         detail: `Step into durability with our everyday wear t-shirt, designed to withstand the 
         rigors of daily life without compromising on comfort.`,
@@ -87,8 +91,9 @@ const SELLING_PRODUCTS = [
     },
     {
         id: 5,
-        name: 'Product 5',
-        price: 5000,
+        uniqueId: 22547811,
+        name: 'Blending Style T',
+        price: 4999,
         image: PRODUCT_5,
         detail: `Embrace eco-conscious fashion in our sustainable t-shirt, a choice that blends style 
         with a commitment to environmentally friendly materials.`,
@@ -99,8 +104,9 @@ const SELLING_PRODUCTS = [
     },
     {
         id: 6,
-        name: 'Product 6',
-        price: 6000,
+        uniqueId: 75255891,
+        name: 'Flair T',
+        price: 5999,
         image: PRODUCT_6,
         detail: `Timeless charm meets modern flair in our classic fit t-shirt, ensuring a stylish 
         and enduring look for any occasion.`,

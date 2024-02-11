@@ -18,6 +18,7 @@ export default function Home() {
                 WISHLIST={false}
                 ACCOUNT={false}
                 CART={false}
+                PRODUCT={false}
                 toggler={toggleCartOrWishlist}
             />
             <Footer toggler={toggleCartOrWishlist} />
