@@ -16,6 +16,12 @@ export default function Globals() {
         } else if (name === 'close') {
             setIsCartOpen(false);
             setIsWishlistOpen(false);
+        } else if (name === 'open') {
+            if (isCartOpen) {
+                setIsCartOpen(true);
+            } else {
+                setIsWishlistOpen(true);
+            }
         }
     }
 

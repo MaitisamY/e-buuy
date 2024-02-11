@@ -1,8 +1,18 @@
 import { useState, useEffect } from 'react';
-import headerStyles from './header.css'
+import './header.css'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { BsCart, BsList, BsPersonCircle, BsSuitHeart, BsXLg } from 'react-icons/bs'
+import { 
+    BsCart, 
+    BsList, 
+    BsPersonCircle, 
+    BsSuitHeart, 
+    BsXLg,
+    BsHouse,
+    BsShop,
+    BsEnvelope,
+    BsCardText
+} from 'react-icons/bs'
 
 export default function Header({ toggler }) {
     const pathname = usePathname();
@@ -90,15 +100,50 @@ export default function Header({ toggler }) {
                 <button className="close" onClick={toggleMenu}>
                     <BsXLg />
                 </button>
-                <Link className="link" href="#" onClick={() => toggler('wishlist')}>
-                    <BsSuitHeart size={25} /> Wishlist
-                </Link>
-                <Link className="link" href="/cart">
-                    <BsCart size={25} /> Cart
-                </Link>
-                <Link className="link" href="/account">
-                    <BsPersonCircle size={25} /> Account
-                </Link>
+                <div className="link-container">
+                    <Link 
+                        className={`link ${pathname === '/' ? 'active' : ''}`} 
+                        href="/"
+                    >
+                        <BsHouse size={25} /> Home
+                    </Link>
+                    <Link 
+                        className={`link ${pathname === '/shop' ? 'active' : ''}`}
+                        href="/shop"
+                    >
+                        <BsShop size={25} /> Shop
+                    </Link>
+                    <Link 
+                        className={`link ${pathname === '/contact' ? 'active' : ''}`} 
+                        href="/contact"
+                    >
+                        <BsEnvelope size={25} /> Contact
+                    </Link>
+                    <Link 
+                        className={`link ${pathname === '/about' ? 'active' : ''}`} 
+                        href="/about"
+                    >
+                        <BsCardText size={25} /> About
+                    </Link>
+                    <Link 
+                        className={`link ${pathname === '/wishlist' ? 'active' : ''}`} 
+                        href="/wishlist"
+                    >
+                        <BsSuitHeart size={25} /> Wishlist
+                    </Link>
+                    <Link 
+                        className={`link ${pathname === '/cart' ? 'active' : ''}`} 
+                        href="/cart"
+                    >
+                        <BsCart size={25} /> Cart
+                    </Link>
+                    <Link 
+                        className={`link ${pathname === '/account' ? 'active' : ''}`} 
+                        href="/account"
+                    >
+                        <BsPersonCircle size={25} /> Account
+                    </Link>
+                </div>
             </div>
         </header>
     );

@@ -5,7 +5,7 @@ export default function Cart({ cartStatus, wishlistStatus, toggler }) {
         <>
             {
                 cartStatus ? (
-                    <div id="sider" className={`sider ${cartStatus ? 'open' : ''}`}>
+                    <div id="sider-cart" className={`sider ${cartStatus ? 'open' : ''}`}>
                         <button className="close" onClick={() => toggler('close')}>
                             <BsXLg />
                         </button>
@@ -16,7 +16,7 @@ export default function Cart({ cartStatus, wishlistStatus, toggler }) {
                     </div>
                 ) 
                 : wishlistStatus ? (
-                    <div id="sider" className={`sider ${wishlistStatus ? 'open' : ''}`}>
+                    <div id="sider-wishlist" className={`sider ${wishlistStatus ? 'open' : ''}`}>
                         <button className="close" onClick={() => toggler('close')}>
                             <BsXLg />
                         </button>

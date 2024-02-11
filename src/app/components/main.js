@@ -2,9 +2,18 @@
 import { lazy, Suspense } from 'react'
 const HOME_CONTENT = lazy(() => import('../home/content'))
 
-export default function Main({ HOME, SHOP, CONTACT, ABOUT, WISHLIST, ACCOUNT, CART, children }) {
+export default function Main({ 
+    HOME, 
+    SHOP, 
+    CONTACT, 
+    ABOUT, 
+    WISHLIST, 
+    ACCOUNT, 
+    CART, 
+    toggler, 
+    children }) {
     return (
-        <main>
+        <main onClick={() => toggler('close')}>
             <Suspense fallback={<div className="loader">Loading...</div>}>
             {
                 HOME ? (
@@ -29,18 +38,17 @@ export default function Main({ HOME, SHOP, CONTACT, ABOUT, WISHLIST, ACCOUNT, CA
                     <>
                         {children}
                     </>
-                )
-                : ACCOUNT ? (
+                ) : 
+                ACCOUNT ? (
                     <>
                         {children}
                     </>
-                )
-                : CART ? (
+                ) : 
+                CART ? (
                     <>
                         {children}
                     </>
-                )
-                : null
+                ) : null
             }
             </Suspense>
         </main>

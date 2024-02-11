@@ -1,10 +1,10 @@
 'use client'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from '../components/header/header'
+import Footer from '../components/footer/footer'
 import Main from '../components/main'
 import Content from './content'
 import Globals from '../globals'
-import CartOrWishlistToggle from '../components/cartOrWishlistToggle'
+import CartOrWishlistToggle from '../components/cart-or-wishlist/cartOrWishlistToggle'
 
 export default function Cart() {
     const { isCartOpen, isWishlistOpen, toggleCartOrWishlist } = Globals();
@@ -19,10 +19,11 @@ export default function Cart() {
                 WISHLIST={false}
                 ACCOUNT={false}
                 CART={true}
+                toggler={toggleCartOrWishlist}
             >
                 <Content />
             </Main>
-            <Footer />
+            <Footer toggler={toggleCartOrWishlist} />
             <CartOrWishlistToggle 
                 cartStatus={isCartOpen} 
                 wishlistStatus={isWishlistOpen} 
